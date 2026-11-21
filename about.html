@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Us - Freelance Maker</title>
+<meta name="description" content="About Freelance Maker ? empowering Makeup Artists, Photographers, Videographers &amp; Mehandi Artists with membership and 0% ZERO commission."/>
+<meta name="author" content="Freelance Maker"/>
+<meta name="theme-color" content="#7B2CBF"/>
+<link rel="icon" href="favicon.png" type="image/png"/>
+<link rel="shortcut icon" href="favicon.png" type="image/png"/>
+<link rel="apple-touch-icon" href="assets/images/logo-fm.png"/>
+<meta property="og:site_name" content="Freelance Maker"/>
+<meta property="og:title" content="About Us - Freelance Maker"/>
+<meta property="og:description" content="Learn how Freelance Maker helps creative professionals grow with 0% ZERO commission."/>
+<meta property="og:image" content="assets/images/logo-fm.png"/>
+<meta property="og:type" content="website"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Great+Vibes&amp;display=swap" rel="stylesheet"/>
+<link href="assets/css/animations.css" rel="stylesheet"/>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          'fm-pink': '#D63384',
+          'fm-purple': '#7B2CBF',
+          'fm-violet': '#8A2BE2',
+          'fm-dark': '#1A1140',
+          'fm-navy': '#1B1535',
+          'fm-light-purple': '#F5F3FF',
+          brand: {
+            pink: '#D63384',
+            purple: '#7B2CBF',
+            dark: '#1A1140',
+            lightPurple: '#F5F3FF'
+          }
+        },
+        fontFamily: {
+          sans: ['Inter', 'sans-serif'],
+          script: ['Great Vibes', 'cursive'],
+        },
+      }
+    }
+  }
+</script>
+<style data-purpose="custom-styling">
+    .gradient-btn { background: linear-gradient(90deg, #D63384 0%, #7B2CBF 100%); }
+    .gradient-btn-nav { background: linear-gradient(90deg, #8A2BE2 0%, #5B1FA6 100%); }
+    .btn-gradient { background: linear-gradient(90deg, #D63384 0%, #7B2CBF 100%); }
+    .text-pink-gradient {
+      background: linear-gradient(90deg, #D63384, #7B2CBF);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-mask {
+      border-radius: 50px 200px 50px 50px;
+      overflow: hidden;
+    }
+    .stat-card {
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body class="bg-white font-sans text-gray-900 overflow-x-hidden">
+<!-- Navigation -->
+<nav class="bg-white py-4 px-6 md:px-12 flex items-center justify-between sticky top-0 z-50 shadow-sm relative">
+  <a href="index.html" class="flex items-center gap-3 min-w-0">
+    <img src="assets/images/logo-fm.png" alt="Freelance Maker" class="h-11 w-auto shrink-0 object-contain"/>
+    <div class="flex flex-col leading-none min-w-0">
+      <span class="text-base sm:text-lg md:text-xl font-extrabold tracking-tight text-fm-dark truncate">FREELANCE MAKER</span>
+      <span class="font-script text-fm-pink text-sm sm:text-base md:text-lg -mt-0.5">Be your own boss</span>
+    </div>
+  </a>
+  <div class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-600">
+    <a class="hover:text-fm-purple transition-colors" href="index.html">Home</a>
+    <a class="text-fm-purple font-semibold" href="about.html">About Us</a>
+    <div class="relative group">
+      <button type="button" class="hover:text-fm-purple transition-colors flex items-center gap-1">
+        Categories
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      </button>
+      <div class="cat-dropdown absolute left-0 top-full mt-3 w-64 bg-white rounded-2xl shadow-xl border border-gray-100 py-2 z-50">
+        <a class="block px-4 py-2.5 hover:bg-fm-light-purple hover:text-fm-purple" href="categories/makeup-artists/index.html">Makeup Artists</a>
+        <a class="block px-4 py-2.5 hover:bg-fm-light-purple hover:text-fm-purple" href="categories/mehandi/index.html">Mehandi</a>
+        <a class="block px-4 py-2.5 hover:bg-fm-light-purple hover:text-fm-purple" href="categories/photographer-videographer/index.html">Photographer / Videographer</a>
+        <a class="block px-4 py-2.5 hover:bg-fm-light-purple hover:text-fm-purple" href="categories/mobile-reels/index.html">Mobile Reels</a>
+      </div>
+    </div>
+    <a class="hover:text-fm-purple transition-colors" href="membership.html">Membership</a>
+    <a class="hover:text-fm-purple transition-colors" href="services.html">Services</a>
+    <a class="hover:text-fm-purple transition-colors" href="contact.html">Contact</a>
+  </div>
+  <div class="flex items-center gap-2 shrink-0">
+    <a href="membership.html" class="hidden md:flex gradient-btn-nav text-white px-5 py-2.5 rounded-full font-semibold items-center gap-2 hover:opacity-90 transition-opacity text-sm">
+      Join Membership
+      <span class="w-6 h-6 bg-white rounded-full flex items-center justify-center">
+        <svg class="w-3.5 h-3.5 text-fm-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+      </span>
+    </a>
+    <button type="button" id="navToggle" class="nav-toggle md:hidden" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+      <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+    </button>
+  </div>
+  <div id="mobileNav" class="mobile-nav">
+    <a href="index.html">Home</a>
+    <a class="is-active" href="about.html">About Us</a>
+    <p class="mobile-cat-label">Categories</p>
+    <a class="mobile-cat-link" href="categories/makeup-artists/index.html">Makeup Artists</a>
+    <a class="mobile-cat-link" href="categories/mehandi/index.html">Mehandi</a>
+    <a class="mobile-cat-link" href="categories/photographer-videographer/index.html">Photographer / Videographer</a>
+    <a class="mobile-cat-link" href="categories/mobile-reels/index.html">Mobile Reels</a>
+    <a href="membership.html">Membership</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+    <a class="mobile-join" href="membership.html">Join Membership</a>
+  </div>
+</nav>
+<main>
+<!-- BEGIN: HeroSection -->
+<section class="py-16 lg:py-24 overflow-hidden" data-purpose="hero-section">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid lg:grid-cols-2 gap-12 items-center">
+<!-- Left Content -->
+<div class="space-y-6 reveal-left">
+<p class="font-script text-3xl text-brand-purple">About us</p>
+<h1 class="text-4xl lg:text-5xl font-extrabold text-brand-dark leading-tight">
+              Empowering <span class="text-brand-pink">Professionals.</span>
+</h1>
+<p class="text-gray-600 text-lg leading-relaxed max-w-lg reveal reveal-delay-1">
+              Freelance Maker is a membership platform designed exclusively for MakeupArtist, Photographers, Videographers &amp; Mehandhi Artists. - we take <span class="zero-commission">0% ZERO commission!</span>
+            </p>
+<div class="pt-4 reveal reveal-delay-2">
+<a class="btn-gradient btn-glow text-white px-8 py-3 rounded-full inline-flex items-center gap-2 font-semibold shadow-lg shadow-brand-purple/20" href="membership.html">
+                Join Membership
+                <div class="bg-white/20 rounded-full p-1">
+<svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</a>
+</div>
+</div>
+<!-- Right Image with Stats -->
+<div class="relative reveal-right">
+<div class="hero-mask relative z-10 bg-gray-100 hover-zoom">
+<img alt="Makeup Artist, Mehandi Artist, Photographer Videographer and Reels creators" class="w-full h-full object-cover" src="assets/images/about-hero-creatives.jpg"/>
+</div>
+<!-- Floating Stat Cards -->
+<div class="absolute -top-6 left-0 z-20 bg-white p-4 rounded-xl stat-card border border-gray-100 float-soft">
+<p class="text-brand-dark font-bold text-lg">2K+</p>
+<p class="text-gray-500 text-sm">Happy Members</p>
+</div>
+<div class="absolute top-0 -right-4 z-20 bg-white p-4 rounded-xl stat-card border border-gray-100 float-soft-delay">
+<p class="text-brand-dark font-bold text-lg">1K+</p>
+<p class="text-gray-500 text-sm">Makeup Artist</p>
+</div>
+<div class="absolute top-24 -right-12 z-20 bg-white p-4 rounded-xl stat-card border border-gray-100 float-soft">
+<p class="text-brand-dark font-bold text-lg">700+</p>
+<p class="text-gray-500 text-sm">Mehandi Artist</p>
+</div>
+<div class="absolute bottom-28 -right-8 z-20 bg-white p-4 rounded-xl stat-card border border-gray-100 float-soft-delay">
+<p class="text-brand-dark font-bold text-lg">800+</p>
+<p class="text-gray-500 text-sm">Photo / Video</p>
+</div>
+<div class="absolute bottom-8 -right-4 z-20 bg-white p-4 rounded-xl stat-card border border-gray-100 float-soft">
+<p class="text-brand-dark font-bold text-lg">500+</p>
+<p class="text-gray-500 text-sm">Reels</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: HeroSection -->
+<!-- BEGIN: MissionSection -->
+<section class="py-16 lg:py-24" data-purpose="mission-section">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid lg:grid-cols-2 gap-16 items-center">
+<!-- Overlapping Images -->
+<div class="relative order-2 lg:order-1 reveal-left">
+<div class="bg-brand-lightPurple absolute top-0 left-0 w-3/4 h-3/4 -z-10 rounded-3xl translate-x-4 translate-y-4"></div>
+<div class="grid grid-cols-2 gap-4 relative">
+<div class="pt-12 hover-zoom">
+<img alt="Camera View" class="rounded-2xl shadow-xl w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXZ1cTfEfFSyVpbf_EV3cAqwvSAdmJ-nUUVrZPnlAr7tGvFQ8fdDrrlLdUu0hzjuKfF1K863kHlyYGiUNwdlLZFmNweJtOrV0hedLXbKqEyJcyX_NyHYKl-N5Pr4G3ETIbHv6QixyM2BTQeWBicgIWMWt03m9qrqtjhCUloikyfYDNCUPXSWv65FTO5WYFueoCvAz2naNQ4qVo-ugxWKiZtWu2Yt_3EoErailul04Y4gmQhxNsUBCHGA"/>
+</div>
+<div class="pt-32 -ml-8 hover-zoom">
+<img alt="Henna Art" class="rounded-2xl shadow-xl w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACvbmjV4_QMO07ASneREEvsUOlrdHoRE3kE2NKaOde65iWKfAHNuH_-fxemxd0eHXI2xPRCcZ9ljWxgSfQxcTsy9HrDmQhC37AGdXyeK0waGnXKbwiBCLZoAzB4ry41NessYlE7mQ1cMe3CJQlkGJ21fU059Qcp09R4ZApDRqpdQ3hej2EFDhJ_JpPyxYdh_nVcrX7bSDSJjI3AY0O_YqN65HUUhVnp1ROZRkarGwNb-9I7Xit2mK8bA"/>
+</div>
+</div>
+</div>
+<!-- Mission Text -->
+<div class="space-y-6 order-1 lg:order-2 reveal-right">
+<p class="font-script text-3xl text-brand-purple">Our mission</p>
+<h2 class="text-4xl font-extrabold text-brand-dark leading-tight">
+              To Empower Professional To Be Their <span class="text-brand-pink">Own Boss</span>
+</h2>
+<p class="text-gray-600 text-lg leading-relaxed">
+              We believe every creative professional deserves the freedom to earn, grow, and succeed on their own terms. That's why we provide a platform with the right resources, visibility, and support - without taking a single rupee from your projects.
+            </p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: MissionSection -->
+<!-- BEGIN: WhyChooseSection -->
+<section class="py-16 lg:py-24" data-purpose="why-us">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="bg-white border border-gray-100 rounded-[40px] p-8 lg:p-16 shadow-sm reveal-scale">
+<div class="grid lg:grid-cols-2 gap-16">
+<!-- Benefits List -->
+<div>
+<h3 class="text-3xl font-extrabold text-brand-dark mb-10">Why Freelance Maker?</h3>
+<ul class="space-y-6">
+<li class="flex items-start gap-4">
+<div class="bg-brand-pink rounded-full p-1 mt-1 shrink-0">
+<svg class="h-3 w-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+</svg>
+</div>
+<p class="text-gray-700"><span class="zero-commission">0% ZERO commission!</span> &mdash; You keep 100% of what you earn.</p>
+</li>
+<li class="flex items-start gap-4">
+<div class="bg-brand-pink rounded-full p-1 mt-1 shrink-0">
+<svg class="h-3 w-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+</svg>
+</div>
+<p class="text-gray-700"><span class="font-semibold text-brand-dark">Membership Only</span> &mdash; Keep your membership active to get projects</p>
+</li>
+<li class="flex items-start gap-4">
+<div class="bg-brand-pink rounded-full p-1 mt-1 shrink-0">
+<svg class="h-3 w-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+</svg>
+</div>
+<p class="text-gray-700"><span class="font-semibold text-brand-dark">No Hidden Charges</span> &mdash; Transparent pricing and complete support.</p>
+</li>
+<li class="flex items-start gap-4">
+<div class="bg-brand-pink rounded-full p-1 mt-1 shrink-0">
+<svg class="h-3 w-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+</svg>
+</div>
+<p class="text-gray-700"><span class="font-semibold text-brand-dark">Trusted Platform</span> &mdash; Built for Professionals, by Professionals</p>
+</li>
+</ul>
+</div>
+<!-- Stats Grid -->
+<div class="grid grid-cols-2 divide-x divide-y divide-gray-100">
+<div class="p-8 text-center">
+<p class="text-3xl font-bold text-brand-pink">2,000+</p>
+<p class="text-[10px] font-bold text-brand-dark uppercase tracking-widest mt-2">Makeup Artist</p>
+</div>
+<div class="p-8 text-center">
+<p class="text-3xl font-bold text-brand-pink">1,000+</p>
+<p class="text-[10px] font-bold text-brand-dark uppercase tracking-widest mt-2">Photographers</p>
+</div>
+<div class="p-8 text-center">
+<p class="text-3xl font-bold text-brand-pink">700+</p>
+<p class="text-[10px] font-bold text-brand-dark uppercase tracking-widest mt-2">Videographers</p>
+</div>
+<div class="p-8 text-center">
+<p class="text-3xl font-bold text-brand-pink">500+</p>
+<p class="text-[10px] font-bold text-brand-dark uppercase tracking-widest mt-2">Mehandhi Artists</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: WhyChooseSection -->
+<!-- BEGIN: CTABanner -->
+<section class="pb-24">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="bg-gradient-to-r from-brand-purple to-[#9C4DFF] rounded-3xl p-10 lg:p-14 flex flex-col lg:flex-row items-center justify-between gap-8 shadow-2xl shadow-brand-purple/40">
+<div class="flex items-center gap-6">
+<div class="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center backdrop-blur-sm border border-white/30 shrink-0">
+<svg class="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.382-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<div>
+<h4 class="text-white text-2xl lg:text-3xl font-bold">Ready to Be a Part of Our Creative Family?</h4>
+<p class="text-white/80 mt-1">Join thousands of creative professionals.</p>
+</div>
+</div>
+<a class="bg-white text-brand-dark px-10 py-4 rounded-full font-bold flex items-center gap-2 hover:bg-gray-100 transition-colors whitespace-nowrap" href="membership.html">
+            Join Membership Now
+            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</section>
+<!-- END: CTABanner -->
+</main>
+<footer class="bg-fm-navy text-white pt-20 pb-0">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12 border-b border-white/10 pb-16">
+    <div>
+      <div class="flex items-center gap-3 mb-5">
+        <img src="assets/images/logo-fm.png" alt="Freelance Maker" class="h-10 w-auto shrink-0 object-contain rounded-md bg-white p-0.5"/>
+        <div class="flex flex-col leading-none">
+          <span class="text-lg font-extrabold tracking-tight">FREELANCE MAKER</span>
+          <span class="font-script text-fm-pink text-base mt-0.5">Be your own boss</span>
+        </div>
+      </div>
+      <p class="text-gray-400 text-sm leading-relaxed">
+        Empowering Makeup Artists, photographers, videographers and mehandhi artists
+      </p>
+    </div>
+    <div>
+      <h4 class="font-bold text-sm mb-6 tracking-wide border-b border-white/20 pb-2 inline-block">QUICK LINKS</h4>
+      <ul class="space-y-3 text-sm text-gray-400">
+        <li><a class="hover:text-white transition-colors" href="index.html">Home</a></li>
+        <li><a class="hover:text-white transition-colors" href="about.html">About Us</a></li>
+        <li><a class="hover:text-white transition-colors" href="membership.html">Membership</a></li>
+        <li><a class="hover:text-white transition-colors" href="services.html">Services</a></li>
+        <li><a class="hover:text-white transition-colors" href="contact.html">Contact</a></li>
+        <li><a class="hover:text-white transition-colors" href="terms.html">Terms &amp; Conditions</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-bold text-sm mb-6 tracking-wide border-b border-white/20 pb-2 inline-block">CONTACT US</h4>
+      <ul class="space-y-4 text-sm text-gray-400">
+        <li class="flex items-center gap-3">
+          <svg class="w-5 h-5 text-fm-pink shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+          +91 69094 47665
+        </li>
+        <li class="flex items-center gap-3">
+          <svg class="w-5 h-5 text-fm-pink shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+          hello@freelancemaker.in
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 text-fm-pink mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+          <span>No:1188/1A, third Floor, Sector 3, HSR Layout, Bengaluru, Karnataka 560102</span>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-bold text-sm mb-6 tracking-wide">FOLLOW US</h4>
+      <div class="space-y-2 mb-5"><a href="https://www.threads.com/@freelance.maker" target="_blank" rel="noopener noreferrer" class="bg-white/5 p-3 rounded-xl flex items-center gap-3 hover:bg-white/10 transition-colors">
+        <div class="bg-white text-fm-navy w-7 h-7 rounded-lg shrink-0 flex items-center justify-center">
+          <span class="text-sm font-black leading-none">@</span>
+        </div>
+        <span class="text-xs">Threads · @freelance.maker</span>
+      </a>
+      </div>
+      <div class="grid grid-cols-3 gap-2">
+        <img alt="Post" class="w-full aspect-square object-cover rounded-lg" src="assets/images/makeup-artist.jpg"/>
+        <img alt="Post" class="w-full aspect-square object-cover rounded-lg" src="assets/images/photographer.jpg"/>
+        <img alt="Post" class="w-full aspect-square object-cover rounded-lg" src="assets/images/mehandhi.jpg"/>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto px-6 pt-5 pb-2 text-center text-xs text-gray-500">
+    &copy; 2024 Freelance Maker. All rights reserved. | <a class="hover:text-white transition-colors" href="terms.html">Terms &amp; Conditions</a>
+  </div>
+
+  <div class="border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-6 py-2.5 text-center text-xs tracking-wide">
+      <span class="text-slate-400">Developed by</span>
+      <a href="https://mintxsolutions.com/" target="_blank" rel="noopener noreferrer" class="text-emerald-400 font-semibold hover:text-emerald-300 transition-colors ml-1">MintX Solutions</a>
+    </div>
+  </div></footer>
+<script src="assets/js/animations.js"></script>
+</body>
+</html>

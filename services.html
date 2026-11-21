@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Freelance Maker - Our Services</title>
+<meta name="description" content="Explore Freelance Maker services for Makeup Artists, Photographers, Videographers &amp; Mehandi Artists. Membership with 0% ZERO commission."/>
+<meta name="author" content="Freelance Maker"/>
+<meta name="theme-color" content="#7B2CBF"/>
+<link rel="icon" href="favicon.png" type="image/png"/>
+<link rel="shortcut icon" href="favicon.png" type="image/png"/>
+<link rel="apple-touch-icon" href="assets/images/logo-fm.png"/>
+<meta property="og:site_name" content="Freelance Maker"/>
+<meta property="og:title" content="Our Services - Freelance Maker"/>
+<meta property="og:description" content="Creative services and membership support for professionals across India."/>
+<meta property="og:image" content="assets/images/logo-fm.png"/>
+<meta property="og:type" content="website"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Great+Vibes&amp;display=swap" rel="stylesheet"/>
+<link href="assets/css/animations.css" rel="stylesheet"/>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          'fm-pink': '#D63384',
+          'fm-purple': '#7B2CBF',
+          'fm-violet': '#8A2BE2',
+          'fm-dark': '#1A1140',
+          'fm-navy': '#1B1535',
+          'fm-light-purple': '#F5F3FF',
+        },
+        fontFamily: {
+          sans: ['Inter', 'sans-serif'],
+          script: ['Great Vibes', 'cursive'],
+        },
+      }
+    }
+  }
+</script>
+<style>
+  .gradient-btn {
+    background: linear-gradient(90deg, #D63384 0%, #7B2CBF 100%);
+  }
+  .gradient-btn-nav {
+    background: linear-gradient(90deg, #8A2BE2 0%, #5B1FA6 100%);
+  }
+  .cta-gradient {
+    background: linear-gradient(90deg, #D63384 0%, #7B2CBF 100%);
+  }
+
+  /* Wave stack gallery ? rounded cards, alternating lift */
+  .services-gallery {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 40px 0 80px;
+    background:
+      radial-gradient(ellipse 60% 50% at 10% 80%, rgba(214, 51, 132, 0.08), transparent 60%),
+      radial-gradient(ellipse 50% 45% at 90% 20%, rgba(123, 44, 191, 0.08), transparent 55%);
+  }
+  .services-viewport {
+    width: 100%;
+    overflow: hidden;
+    mask-image: linear-gradient(90deg, transparent 0%, #000 5%, #000 95%, transparent 100%);
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 5%, #000 95%, transparent 100%);
+  }
+  .services-track {
+    display: flex;
+    align-items: flex-end;
+    gap: 1.25rem;
+    width: max-content;
+    will-change: transform;
+    animation: services-marquee 32s linear infinite;
+    padding: 48px 12px 28px;
+  }
+  .services-track:hover {
+    animation-play-state: paused;
+  }
+  @keyframes services-marquee {
+    from { transform: translate3d(0, 0, 0); }
+    to { transform: translate3d(-50%, 0, 0); }
+  }
+  .service-card {
+    flex: 0 0 auto;
+    position: relative;
+    width: 200px;
+    height: 260px;
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 16px 36px rgba(26, 17, 64, 0.14);
+    background: #eee;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+  }
+  @media (min-width: 768px) {
+    .service-card {
+      width: 230px;
+      height: 300px;
+      border-radius: 32px;
+    }
+  }
+  .service-card:nth-child(odd) {
+    transform: translateY(-28px) rotate(-3deg);
+  }
+  .service-card:nth-child(even) {
+    transform: translateY(8px) rotate(2.5deg);
+  }
+  .service-card:hover {
+    transform: translateY(-12px) rotate(0deg) scale(1.04);
+    box-shadow: 0 24px 48px rgba(26, 17, 64, 0.22);
+    z-index: 5;
+  }
+  .service-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+  .service-card:hover img {
+    transform: scale(1.06);
+  }
+  .service-card .card-label {
+    position: absolute;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: rgba(27, 21, 53, 0.72);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 600;
+    text-align: center;
+    backdrop-filter: blur(6px);
+    opacity: 0;
+    transform: translateY(6px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  .service-card:hover .card-label {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .trusted-badge {
+    position: absolute;
+    right: max(16px, 6%);
+    bottom: 20px;
+    z-index: 10;
+    background: #fff;
+    border-radius: 16px;
+    padding: 12px 16px;
+    box-shadow: 0 16px 40px rgba(26, 17, 64, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 200px;
+    pointer-events: none;
+  }
+</style>
+</head>
+<body class="bg-white font-sans text-gray-900 overflow-x-hidden">
+
+<!-- Navigation -->
+<nav class="bg-white py-4 px-6 md:px-12 flex items-center justify-between sticky top-0 z-50 shadow-sm relative">
+  <a href="index.html" class="flex items-center gap-3 min-w-0">
+    <img src="assets/images/logo-fm.png" alt="Freelance Maker" class="h-11 w-auto shrink-0 object-contain"/>
+    <div class="flex flex-col leading-none min-w-0">
+      <span class="text-base sm:text-lg md:text-xl font-extrabold tracking-tight text-fm-dark truncate">FREELANCE MAKER</span>
+      <span class="font-script text-fm-pink text-sm sm:text-base md:text-lg -mt-0.5">Be your own boss</span>
+    </div>
+  </a>
+  <div class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-600">
+    <a class="hover:text-fm-purple transition-colors" href="index.html">Home</a>
+    <a class="hover:text-fm-purple transition-colors" href="about.html">About Us</a>
+    <div class="relative group">
+      <button type="button" class="hover:text-fm-purple transition-colors flex items-center gap-1">
+        Categories
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      </button>
+      <div class="cat-dropdown absolute left-0 top-full mt-3 w-64 bg-white rounded-2xl shadow-xl border border-gray-100 py-2 z-50">
+        <a class="block px-4 py-2.5 hover:bg-fm-light-purple hover:text-fm-purple" href="categories/makeup-artists/index.html">Makeup Artists</a>
+        <a class="block px-4 py-2.5 hover:bg-fm-light-purple hover:text-fm-purple" href="categories/mehandi/index.html">Mehandi</a>
+        <a class="block px-4 py-2.5 hover:bg-fm-light-purple hover:text-fm-purple" href="categories/photographer-videographer/index.html">Photographer / Videographer</a>
+        <a class="block px-4 py-2.5 hover:bg-fm-light-purple hover:text-fm-purple" href="categories/mobile-reels/index.html">Mobile Reels</a>
+      </div>
+    </div>
+    <a class="hover:text-fm-purple transition-colors" href="membership.html">Membership</a>
+    <a class="text-fm-purple font-semibold" href="services.html">Services</a>
+    <a class="hover:text-fm-purple transition-colors" href="contact.html">Contact</a>
+  </div>
+  <div class="flex items-center gap-2 shrink-0">
+    <a href="membership.html" class="hidden md:flex gradient-btn-nav text-white px-5 py-2.5 rounded-full font-semibold items-center gap-2 hover:opacity-90 transition-opacity text-sm">
+      Join Membership
+      <span class="w-6 h-6 bg-white rounded-full flex items-center justify-center">
+        <svg class="w-3.5 h-3.5 text-fm-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+      </span>
+    </a>
+    <button type="button" id="navToggle" class="nav-toggle md:hidden" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+      <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+    </button>
+  </div>
+  <div id="mobileNav" class="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <p class="mobile-cat-label">Categories</p>
+    <a class="mobile-cat-link" href="categories/makeup-artists/index.html">Makeup Artists</a>
+    <a class="mobile-cat-link" href="categories/mehandi/index.html">Mehandi</a>
+    <a class="mobile-cat-link" href="categories/photographer-videographer/index.html">Photographer / Videographer</a>
+    <a class="mobile-cat-link" href="categories/mobile-reels/index.html">Mobile Reels</a>
+    <a href="membership.html">Membership</a>
+    <a class="is-active" href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+    <a class="mobile-join" href="membership.html">Join Membership</a>
+  </div>
+</nav>
+
+<main>
+<!-- Hero + wave gallery -->
+<section class="pt-12 pb-10 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl md:text-4xl font-script text-fm-pink mb-2 reveal">Our Services</h2>
+    <p class="text-gray-500 text-sm md:text-base mb-4 max-w-xl reveal reveal-delay-1">Makeup, photography, videography &amp; mehandhi &mdash; showcased in motion.</p>
+  </div>
+
+  <div class="services-gallery">
+    <div class="services-viewport">
+      <div class="services-track" id="servicesTrack">
+        <!-- Set A -->
+        <div class="service-card">
+          <img alt="Photographer" src="assets/images/service-photographer.jpg"/>
+          <span class="card-label">Photographers</span>
+        </div>
+        <div class="service-card">
+          <img alt="Mehandhi" src="assets/images/service-mehandhi.jpg"/>
+          <span class="card-label">Mehandhi Artists</span>
+        </div>
+        <div class="service-card">
+          <img alt="Videographer" src="assets/images/service-videographer.jpg"/>
+          <span class="card-label">Videographers</span>
+        </div>
+        <div class="service-card">
+          <img alt="Studio" src="assets/images/service-studio.jpg"/>
+          <span class="card-label">Studio Pros</span>
+        </div>
+        <div class="service-card">
+          <img alt="Wedding" src="assets/images/service-wedding.jpg"/>
+          <span class="card-label">Wedding Shoots</span>
+        </div>
+        <!-- Set B (seamless loop) -->
+        <div class="service-card">
+          <img alt="Photographer" src="assets/images/service-photographer.jpg"/>
+          <span class="card-label">Photographers</span>
+        </div>
+        <div class="service-card">
+          <img alt="Mehandhi" src="assets/images/service-mehandhi.jpg"/>
+          <span class="card-label">Mehandhi Artists</span>
+        </div>
+        <div class="service-card">
+          <img alt="Videographer" src="assets/images/service-videographer.jpg"/>
+          <span class="card-label">Videographers</span>
+        </div>
+        <div class="service-card">
+          <img alt="Studio" src="assets/images/service-studio.jpg"/>
+          <span class="card-label">Studio Pros</span>
+        </div>
+        <div class="service-card">
+          <img alt="Wedding" src="assets/images/service-wedding.jpg"/>
+          <span class="card-label">Wedding Shoots</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="trusted-badge float-soft">
+      <div class="w-11 h-11 rounded-full bg-fm-purple flex items-center justify-center shrink-0">
+        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+      </div>
+      <div>
+        <p class="text-xs text-gray-500">Trusted by</p>
+        <p class="text-base font-bold text-fm-dark leading-tight">2,000+ Creatives</p>
+        <p class="text-[10px] text-gray-400 uppercase tracking-widest">Across India</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mini features -->
+  <div class="max-w-7xl mx-auto px-6 pt-10">
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="flex items-start gap-4 hover-lift reveal min-w-0">
+        <div class="w-12 h-12 bg-pink-50 rounded-full flex items-center justify-center shrink-0 icon-bounce">
+          <svg class="w-5 h-5 text-fm-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path></svg>
+        </div>
+        <div class="min-w-0">
+          <h3 class="font-bold text-sm text-fm-dark leading-snug"><span class="zero-commission">0% ZERO commission!</span></h3>
+          <p class="text-xs text-gray-500 mt-1">Keep 100% of what you earn.</p>
+        </div>
+      </div>
+      <div class="flex items-start gap-4 md:border-l md:border-gray-100 md:pl-8 hover-lift reveal reveal-delay-1 min-w-0">
+        <div class="w-12 h-12 bg-purple-50 rounded-full flex items-center justify-center shrink-0 icon-bounce">
+          <svg class="w-5 h-5 text-fm-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+        </div>
+        <div class="min-w-0">
+          <h3 class="font-bold text-sm text-fm-dark">Membership Only</h3>
+          <p class="text-xs text-gray-500 mt-1">Pay once and get access to everything.</p>
+        </div>
+      </div>
+      <div class="flex items-start gap-4 md:border-l md:border-gray-100 md:pl-8 hover-lift reveal reveal-delay-2 min-w-0">
+        <div class="w-12 h-12 bg-rose-50 rounded-full flex items-center justify-center shrink-0 icon-bounce">
+          <svg class="w-5 h-5 text-fm-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+        </div>
+        <div class="min-w-0">
+          <h3 class="font-bold text-sm text-fm-dark">No Hidden Charges</h3>
+          <p class="text-xs text-gray-500 mt-1">Transparent pricing. Complete support.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose -->
+<section class="py-16 px-4">
+  <div class="max-w-7xl mx-auto bg-[#FDF7FB] rounded-[40px] p-8 md:p-14 reveal-scale">
+    <div class="flex flex-col lg:flex-row items-start lg:items-center gap-10 lg:gap-12">
+      <div class="lg:w-2/5 shrink-0">
+        <h2 class="text-4xl md:text-5xl font-extrabold text-fm-dark leading-tight">
+          Why <span class="text-fm-pink">Choose</span><br/>Freelance Maker?
+        </h2>
+      </div>
+      <div class="lg:w-3/5 grid grid-cols-1 sm:grid-cols-3 gap-5 w-full min-w-0">
+        <div class="text-center bg-white/70 rounded-2xl p-5 shadow-sm border border-white min-w-0 hover-lift">
+          <div class="w-14 h-14 bg-fm-purple rounded-2xl flex items-center justify-center mx-auto mb-4 icon-bounce pulse-soft">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path></svg>
+          </div>
+          <h4 class="font-bold text-fm-dark mb-2 leading-snug">
+            <span class="zero-commission zero-commission-block">0% ZERO commission!</span>
+          </h4>
+          <p class="text-sm text-gray-500">You keep 100% of what you earn.</p>
+        </div>
+        <div class="text-center bg-white/70 rounded-2xl p-5 shadow-sm border border-white min-w-0 hover-lift reveal-delay-1">
+          <div class="w-14 h-14 bg-fm-purple rounded-2xl flex items-center justify-center mx-auto mb-4 icon-bounce">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+          </div>
+          <h4 class="font-bold text-fm-dark mb-2 leading-snug">Professional-Focused Community</h4>
+          <p class="text-sm text-gray-500">Connect with like-minded creators.</p>
+        </div>
+        <div class="text-center bg-white/70 rounded-2xl p-5 shadow-sm border border-white min-w-0 hover-lift reveal-delay-2">
+          <div class="w-14 h-14 bg-fm-purple rounded-2xl flex items-center justify-center mx-auto mb-4 icon-bounce">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+          </div>
+          <h4 class="font-bold text-fm-dark mb-2 leading-snug">Trusted by 2,000+ Creatives</h4>
+          <p class="text-sm text-gray-500">Join a growing network across India.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How Freelance Maker Works — bookings & project exposure -->
+<section class="py-16 md:py-20 bg-gradient-to-b from-white via-pink-50/40 to-white">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="max-w-3xl mx-auto text-center mb-12 md:mb-16 reveal">
+      <p class="font-script text-3xl text-fm-pink mb-3">How we work</p>
+      <h2 class="text-3xl md:text-5xl font-extrabold text-fm-dark leading-tight">
+        How Freelance Maker <span class="text-fm-pink">Works?</span>
+      </h2>
+      <p class="mt-5 text-gray-600 text-base md:text-lg leading-relaxed">
+        How we provide bookings and expose projects to professionals across India.
+      </p>
+    </div>
+
+    <div class="bg-white rounded-[32px] border border-gray-100 shadow-sm p-6 md:p-10 mb-12 reveal">
+      <h3 class="text-xl md:text-2xl font-extrabold text-fm-dark mb-4">Our mission for professionals</h3>
+      <p class="text-gray-600 leading-relaxed mb-4">
+        At Freelance Maker, our core mission is to empower makeup artists, independent photographers, videographers,
+        and event professionals across India by connecting them directly with high-margin, verified business opportunities.
+        We eliminate the constant hustle of cold calling and price-cut bidding on open marketplaces by building a structured,
+        high-intent lead pipeline tailored for the Indian event and creative industry.
+      </p>
+      <p class="text-gray-600 leading-relaxed">
+        Active members get steady exposure through peak wedding and corporate event seasons — with
+        <span class="zero-commission">0% ZERO commission!</span> so the project cost belongs to you only.
+      </p>
+    </div>
+
+    <div class="mb-4 reveal">
+      <h3 class="text-2xl md:text-3xl font-extrabold text-fm-dark mb-2">Strategic Multi-Source Lead Generation</h3>
+      <p class="text-gray-600 max-w-3xl leading-relaxed mb-8">
+        Instead of relying on word-of-mouth or casual WhatsApp group forwards, we systematically aggregate high-value
+        requirements through deep-rooted industry partnerships across tier-1 and tier-2 markets:
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 gap-5 mb-14">
+      <div class="bg-white rounded-3xl border border-pink-100 p-6 hover-lift reveal">
+        <div class="w-12 h-12 rounded-2xl bg-pink-50 text-fm-pink flex items-center justify-center mb-4">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+        </div>
+        <h4 class="font-bold text-fm-dark text-lg mb-2">Banquet Hall &amp; Venue Managers</h4>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          On-ground tie-ups with hotel sales heads, banquet managers, and resort coordinators who host destination weddings,
+          corporate galas, and private functions.
+        </p>
+      </div>
+      <div class="bg-white rounded-3xl border border-purple-100 p-6 hover-lift reveal reveal-delay-1">
+        <div class="w-12 h-12 rounded-2xl bg-purple-50 text-fm-purple flex items-center justify-center mb-4">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+        </div>
+        <h4 class="font-bold text-fm-dark text-lg mb-2">Corporate Allotment &amp; Agency Coordinators</h4>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          Direct connections with project managers and coordinators at top-tier corporate event companies and production houses
+          looking to outsource or sub-contract specialized crew for multi-city events.
+        </p>
+      </div>
+      <div class="bg-white rounded-3xl border border-rose-100 p-6 hover-lift reveal reveal-delay-1">
+        <div class="w-12 h-12 rounded-2xl bg-rose-50 text-rose-500 flex items-center justify-center mb-4">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        </div>
+        <h4 class="font-bold text-fm-dark text-lg mb-2">Event Management Partners</h4>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          Alliances with wedding planners, trade show organizers, and experiential marketing agencies needing reliable local talent.
+        </p>
+      </div>
+      <div class="bg-white rounded-3xl border border-violet-100 p-6 hover-lift reveal reveal-delay-2">
+        <div class="w-12 h-12 rounded-2xl bg-violet-50 text-fm-violet flex items-center justify-center mb-4">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+        </div>
+        <h4 class="font-bold text-fm-dark text-lg mb-2">Direct Network Inquiries</h4>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          High-intent direct bookings coming through our broader network of corporate clients and individual service seekers.
+        </p>
+      </div>
+    </div>
+
+    <div class="rounded-[32px] bg-fm-navy text-white p-6 md:p-10 reveal-scale">
+      <h3 class="text-2xl md:text-3xl font-extrabold mb-4">Transparent Inquiry Details &amp; Direct Access</h3>
+      <p class="text-white/85 leading-relaxed mb-5 max-w-4xl">
+        When a requirement comes in, we verify the budget, dates, deliverables, and client intent before passing it along.
+        Active paid members gain complete exposure to these verified inquiries — including exact project scopes, client contact details,
+        venue locations, and clear budget estimates.
+      </p>
+      <ul class="grid sm:grid-cols-2 gap-3 mb-6 text-sm">
+        <li class="flex items-start gap-2 bg-white/5 rounded-xl px-4 py-3"><span class="text-fm-pink font-bold">✓</span> No hidden details</li>
+        <li class="flex items-start gap-2 bg-white/5 rounded-xl px-4 py-3"><span class="text-fm-pink font-bold">✓</span> No middlemen diluting your margins</li>
+        <li class="flex items-start gap-2 bg-white/5 rounded-xl px-4 py-3"><span class="text-fm-pink font-bold">✓</span> <span class="zero-commission">0% ZERO commission!</span></li>
+        <li class="flex items-start gap-2 bg-white/5 rounded-xl px-4 py-3"><span class="text-fm-pink font-bold">✓</span> Project cost belongs to you only</li>
+      </ul>
+      <p class="text-white/85 leading-relaxed max-w-4xl">
+        With complete project visibility in hand, active members deal directly with event managers, corporate coordinators,
+        or end clients to negotiate terms, share portfolios, and close bookings — building a steady booking calendar through
+        every peak wedding and corporate event season across India.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- How It Works -->
+<section class="py-20">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <div class="flex items-center justify-center gap-4 mb-4">
+      <div class="w-12 h-px bg-fm-pink"></div>
+      <span class="text-xs font-bold uppercase tracking-widest text-fm-pink">Get Started</span>
+      <div class="w-12 h-px bg-fm-pink"></div>
+    </div>
+    <h2 class="text-4xl md:text-5xl font-extrabold text-fm-dark mb-16 reveal">Join in <span class="text-fm-pink">3 Steps</span></h2>
+
+    <div class="relative grid md:grid-cols-3 gap-10 md:gap-6">
+      <div class="hidden md:block absolute top-[42px] left-[18%] right-[18%] border-t-2 border-dotted border-pink-200 z-0"></div>
+
+      <div class="relative z-10 flex flex-col items-center reveal">
+        <div class="w-20 h-20 bg-pink-50 rounded-full flex items-center justify-center mb-5 pulse-soft">
+          <svg class="w-9 h-9 text-fm-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+        </div>
+        <span class="text-fm-pink font-bold mb-2">01</span>
+        <h4 class="font-bold text-xl text-fm-dark mb-3">Join Membership</h4>
+        <p class="text-sm text-gray-500 max-w-[220px]">Choose the plan that suits you.</p>
+      </div>
+
+      <div class="relative z-10 flex flex-col items-center reveal reveal-delay-1">
+        <div class="w-20 h-20 bg-purple-50 rounded-full flex items-center justify-center mb-5 pulse-soft">
+          <svg class="w-9 h-9 text-fm-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+        </div>
+        <span class="text-fm-pink font-bold mb-2">02</span>
+        <h4 class="font-bold text-xl text-fm-dark mb-3">Enter your Details</h4>
+        <p class="text-sm text-gray-500 max-w-[240px]">Provide your basic information, skills, and portfolio to complete your membership registration.</p>
+      </div>
+
+      <div class="relative z-10 flex flex-col items-center reveal reveal-delay-2">
+        <div class="w-20 h-20 bg-purple-50 rounded-full flex items-center justify-center mb-5 pulse-soft">
+          <svg class="w-9 h-9 text-fm-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+        </div>
+        <span class="text-fm-pink font-bold mb-2">03</span>
+        <h4 class="font-bold text-xl text-fm-dark mb-3">Succeed &amp; Earn</h4>
+        <p class="text-sm text-gray-500 max-w-[220px]">Keep 100% of what you earn. No commission!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="max-w-7xl mx-auto px-6 mb-20">
+  <div class="cta-gradient cta-shine rounded-[32px] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 text-white reveal-scale">
+    <div class="flex items-center gap-5">
+      <div class="w-14 h-14 bg-white/20 rounded-2xl flex items-center justify-center shrink-0">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+      </div>
+      <div>
+        <h2 class="text-2xl md:text-4xl font-extrabold">Ready to Take Your Projects?</h2>
+        <p class="text-white/85 mt-1">Join today and get Projects</p>
+      </div>
+    </div>
+    <a href="membership.html" class="bg-white text-fm-dark px-8 py-4 rounded-full font-bold flex items-center gap-2 hover:bg-gray-50 transition shadow-xl shrink-0">
+      Join Membership Now
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+    </a>
+  </div>
+</section>
+</main>
+
+<footer class="bg-fm-navy text-white pt-20 pb-0">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12 border-b border-white/10 pb-16">
+    <div>
+      <div class="flex items-center gap-3 mb-5">
+        <img src="assets/images/logo-fm.png" alt="Freelance Maker" class="h-10 w-auto shrink-0 object-contain rounded-md bg-white p-0.5"/>
+        <div class="flex flex-col leading-none">
+          <span class="text-lg font-extrabold tracking-tight">FREELANCE MAKER</span>
+          <span class="font-script text-fm-pink text-base mt-0.5">Be your own boss</span>
+        </div>
+      </div>
+      <p class="text-gray-400 text-sm leading-relaxed">
+        Empowering Makeup Artists, photographers, videographers and mehandhi artists
+      </p>
+    </div>
+    <div>
+      <h4 class="font-bold text-sm mb-6 tracking-wide border-b border-white/20 pb-2 inline-block">QUICK LINKS</h4>
+      <ul class="space-y-3 text-sm text-gray-400">
+        <li><a class="hover:text-white transition-colors" href="index.html">Home</a></li>
+        <li><a class="hover:text-white transition-colors" href="about.html">About Us</a></li>
+        <li><a class="hover:text-white transition-colors" href="membership.html">Membership</a></li>
+        <li><a class="hover:text-white transition-colors" href="services.html">Services</a></li>
+        <li><a class="hover:text-white transition-colors" href="contact.html">Contact</a></li>
+        <li><a class="hover:text-white transition-colors" href="terms.html">Terms &amp; Conditions</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-bold text-sm mb-6 tracking-wide border-b border-white/20 pb-2 inline-block">CONTACT US</h4>
+      <ul class="space-y-4 text-sm text-gray-400">
+        <li class="flex items-center gap-3">
+          <svg class="w-5 h-5 text-fm-pink shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+          +91 69094 47665
+        </li>
+        <li class="flex items-center gap-3">
+          <svg class="w-5 h-5 text-fm-pink shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+          hello@freelancemaker.in
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 text-fm-pink mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+          <span>No:1188/1A, third Floor, Sector 3, HSR Layout, Bengaluru, Karnataka 560102</span>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-bold text-sm mb-6 tracking-wide">FOLLOW US</h4>
+      <div class="space-y-2 mb-5"><a href="https://www.threads.com/@freelance.maker" target="_blank" rel="noopener noreferrer" class="bg-white/5 p-3 rounded-xl flex items-center gap-3 hover:bg-white/10 transition-colors">
+        <div class="bg-white text-fm-navy w-7 h-7 rounded-lg shrink-0 flex items-center justify-center">
+          <span class="text-sm font-black leading-none">@</span>
+        </div>
+        <span class="text-xs">Threads · @freelance.maker</span>
+      </a>
+      </div>
+      <div class="grid grid-cols-3 gap-2">
+        <img alt="Makeup artist" class="w-full aspect-square object-cover rounded-lg" src="assets/images/makeup-artist.jpg"/>
+        <img alt="Photographer" class="w-full aspect-square object-cover rounded-lg" src="assets/images/photographer.jpg"/>
+        <img alt="Mehandhi" class="w-full aspect-square object-cover rounded-lg" src="assets/images/mehandhi.jpg"/>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto px-6 pt-5 pb-2 text-center text-xs text-gray-500">
+    &copy; 2024 Freelance Maker. All rights reserved. | <a class="hover:text-white transition-colors" href="terms.html">Terms &amp; Conditions</a>
+  </div>
+
+  <div class="border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-6 py-2.5 text-center text-xs tracking-wide">
+      <span class="text-slate-400">Developed by</span>
+      <a href="https://mintxsolutions.com/" target="_blank" rel="noopener noreferrer" class="text-emerald-400 font-semibold hover:text-emerald-300 transition-colors ml-1">MintX Solutions</a>
+    </div>
+  </div></footer>
+<script src="assets/js/animations.js"></script>
+</body>
+</html>
